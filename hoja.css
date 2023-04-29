@@ -1,0 +1,66 @@
+body{
+ background-size: 100vw 100vh;
+    background-attachment: fixed;
+    background-color: rgb(35, 31, 71);
+   
+}
+button{
+    background-color: #6322db;
+	padding: 20px 30px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+    margin-left: 10px;
+}
+a{
+    color: rgb(255, 252, 252);
+}
+form{
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+.heart {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(255, 0, 0);
+    position: relative;
+    box-shadow: 10px 10px 90px;
+    animation: animheart.6s linear infinite;
+}
+
+@keyframes animheart{
+0%{
+    transform: rotate(-45deg) scale(1.07) 
+} 
+80%{
+    transform: rotate(-45deg) scale(1)
+}
+100%{
+    transform: rotate(-45deg) scale(.8)
+}
+}
+
+.heart::before{
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    box-shadow: -10px 10px 90px red;
+    top: -50%;
+    border-radius: 50%;
+}
+.heart::after{
+    content: '';
+    position: absolute;
+    box-shadow: -10px 10px 90px red;
+    height: 70px;
+    width: 70px;
+    background-color: red;
+    right: -50%;
+    border-radius: 50%;
+}
